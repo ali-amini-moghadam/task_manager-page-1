@@ -1,0 +1,263 @@
+body {
+    font-family: verdana;
+    margin: 0;
+    padding: 0;
+}
+.toolbar {
+    display: flex;
+    background-color: rgb(2, 106, 167);
+    position: fixed;
+    right: 0;
+    left: 0;
+    align-items: center;
+    padding: 25px;
+}
+.left_side_bar {
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+.right_side_bar {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+button.icon, .home_page{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(78, 151, 194);
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 0px 12px;
+    margin: -20px 2px;
+    line-height: 40px;
+}
+button.icon:hover {
+    background-color: rgb(111, 176, 214);
+}
+.board_icon {
+    margin-left: 10px;
+}   
+.search {
+    width: 180px;
+    height: 40px;
+}
+/* Search icon */
+.search span {
+    position: relative;
+    left: 75px;
+}
+.logo {
+    text-decoration: none;
+    position: absolute;
+    left: 47%;
+    color: white;
+    opacity: 0.6;
+} 
+.logo:hover {
+    opacity: 1;
+}
+.logo span {
+    margin-left: 5px;
+}
+@media screen and (max-width: 600px) {
+    .info {
+        display: none;
+    }
+    .search {
+        width: 38px;
+        height: 40px;
+    }
+    /* search icon */
+    .search span {
+        position: absolute;
+        left: 102px;
+        bottom: -20px;
+    }
+    .logo {
+        position: absolute;
+        left: 44%;
+        font-size: 18px;
+    }
+    .left_side_modal, .background_grid, #create_btn {
+        position: relative;
+        right: 120px;
+    }
+}
+/* header of personal boards area */
+.header_container {
+    position: fixed;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 70px;
+}
+.boards_header {
+    margin-right: 20px;
+}
+.icon {
+    font-size: 22px;
+}
+.icon_lable {
+    font-size: 18px;
+    font-weight: bolder;
+    margin-right: 5px;
+}
+.list_container {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    position: fixed;
+    right: 0;
+    width: 60%;
+    margin-right: 15px;
+    margin-top: 120px;
+    list-style: none;
+}
+.create_board_item {
+    background-color: rgb(230, 245, 245);
+    width: 170px;
+    height: 90px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-align: center;
+    line-height: 80px;
+}
+.create_board_item:hover {
+    background-color: rgb(206, 233, 233);           
+    cursor: pointer;
+}
+.dynamic_board {
+    background-size: cover;
+    background-color: rgb(230, 245, 245);
+    font-weight: bold;
+    width: 170px;
+    height: 90px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-align: center;
+    line-height: 80px;
+}
+.dynamic_board:hover {
+    background-color: rgb(206, 233, 233);           
+    cursor: pointer;
+}
+/* span (text) in li element */
+.text {  
+    color: black;
+    font-size: 18px;
+    user-select: none;
+}  
+.dynamic_text {
+    color: white;
+    position: relative;
+    left: 33px;
+    bottom: 20px;
+}
+.overlay_modal {
+    display: none;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: appearance 0.3s;
+}
+@keyframes appearance {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+/*  modal window items container ... */
+.item_container {
+    display: flex; 
+    justify-content: center;
+    background-color: transparent; /*Change this to transparent ... */
+    position: absolute;
+    left: 35%;
+    width: 500px;
+    height: 250px;
+    margin-top: 50px;
+    padding: -60px;
+}
+.left_side_modal {
+    margin: 15px 0px 145px 10px;
+    flex-basis: 70%;
+    border-radius: 3px;
+    background-color: rgb(209, 215, 221);
+    background-image: url(images/modal_background/beach.jpg);
+    background-size: cover;  /*Default background for modal*/
+}
+.board_title_container {
+    display: flex; /*important*/
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.board_title_container > input {
+    background-color: rgba(255, 255, 255, 0.65);
+    font: 17px verdana;
+    direction: rtl;
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: right;
+    border: none;
+    outline: none;  
+}
+.board_title_container > input:hover {
+    background-color: rgba(235, 238, 238, 0.973);
+}
+::placeholder {
+    font-family: verdana;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+.multiplication_sign {
+    color: white;
+    cursor: pointer;
+}
+/* Picture Grid container (Right Side) ... */
+.background_grid {
+    flex-basis: 40%;
+    padding: 15px;
+}
+button.picture_grid_btn {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 26px;
+    padding: 0;
+    margin-bottom: 7px;
+    border-radius: 4px;
+    background-size: cover;
+}
+.tick_mark {
+    position: relative;
+    font-weight: bold;
+    color: black;
+}
+.create_btn_container {
+    position: absolute;
+    bottom: 90px;
+    left: 10px;
+}
+button#create_btn {
+    background-color: white;
+    color: rgba(128, 128, 128, 0.4);
+    padding: 10px 30px;
+    border-radius: 5px;
+    font: 16px bold;
+    cursor: not-allowed;
+    border: none;
+    outline: none;
+}

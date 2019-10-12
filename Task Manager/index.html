@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/8b9389f8d5.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image" href="images/icon/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="javascript.js"></script>
+    <title> ترلو | تابلوها</title>
+</head>
+<body>
+    <!-- Creating toolbar -->
+    <div class="toolbar">
+        <!-- Left side of toolbar -->
+        <div class="left_side_bar">
+            <a class="home_page" href="index.html" ><i class="fas fa-home"></i></a>
+            <button class="icon"><i class="fab fa-trello"></i></button>
+            <button class="icon search"><span><i class="fas fa-search"></i></span></button>
+        </div>
+        <!-- Creating logo -->
+        <a class="icon logo" href="index.html"><i class="fab fa-trello"><span>ترلو</span></i></a>
+        <!-- Right side of toolbar -->
+            <div class="right_side_bar">
+                <button class="icon home_page"><i class="fas fa-plus"></i></button>
+                <button class="icon info"><i class="fas fa-info-circle"></i></button>
+                <button class="icon"><i class="far fa-bell"></i></button>
+                <button class="icon"><i class="fas fa-user-circle"></i></button>
+            </div>
+    </div>
+    <!-- Header of personal board -->
+    <div class="header_container">
+        <div class="boards_header">
+            <span class="icon_lable">تابلوهای شخصی</span>
+            <span class="icon"><i class="far fa-user"></i></span>
+        </div>
+    </div>
+    <!-- Creating New Boards -->
+    <ul class="list_container">
+        <li class="create_board_item" onclick="appear_modal()">
+            <span class="text">ایجاد تابلوی جدید</span>
+        </li> 
+    </ul>
+    <!-- dark background for modal -->
+    <div class="overlay_modal" id="modal">
+        <!-- window of modal -->
+        <div class="item_container">
+            <!-- left side modal (Modal winow) -->
+            <div class="left_side_modal">
+                <!-- content of board title ... -->
+                <div class="board_title_container">
+                    <input id="input_title" type="text" onkeyup="enable_create_btn()" placeholder="اضافه کردن عنوان تابلو">
+                    <span class="multiplication_sign" onclick="close_modal()">&times;</span>
+                </div>
+            </div>
+            <!-- Right side modal (Pictures-Grid) -->
+            <div class="background_grid">
+                <!-- First Row -->
+                <button class="picture_grid_btn" onclick="switch_background('beach')" style="background-image: url(images/background_grid/beach.jpg)"></button>
+                <button class="picture_grid_btn" onclick="switch_background('sky')" style="background-image: url(images/background_grid/sky_grid.jpg)"></button>
+                <button class="picture_grid_btn" onclick="switch_background('road_art')" style="background-image: url(images/background_grid/art_road.jpg)"></button>
+                <!-- Second Row -->
+                <button class="picture_grid_btn" onclick="switch_background('landscape_art')" style="background-image: url(images/background_grid/landscape_art.jpg)"></button>
+                <button class="picture_grid_btn" onclick="switch_background('flower_pink')" style="background-image: url(images/background_grid/flower_pink.jpg)"></button> 
+                <button class="picture_grid_btn" onclick="switch_background('flower_dew')" style="background-image: url(images/background_grid/flower_dew.jpg)"></button>
+                <!-- Third Row -->
+                <button class="picture_grid_btn" onclick="switch_background('wood_texture')" style="background-image: url(images/background_grid/wood_texture.jpg)"></button>
+                <button class="picture_grid_btn" onclick="switch_background('blue')" style="background-image: url(images/background_grid/blue.png)"></button>
+                <button class="picture_grid_btn" onclick="switch_background('orange')" style="background-image: url(images/background_grid/orange.png)"></button>
+            </div>
+            <div class="create_btn_container">
+                <button id="create_btn" onclick="create_board()">ایجاد کردن</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
