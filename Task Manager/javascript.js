@@ -21,9 +21,9 @@ function close_modal() {
 // appear modal window .....
 function appear_modal() {
     var modal = document.getElementsByClassName('overlay_modal')[0];
+    modal.style.display = 'block';
     var input_title = document.getElementById('input_title');
     input_title.focus();
-    modal.style.display = 'block';
 }
 // Changing wallpaper of the background grid in modal ....
 function switch_background(file_name) {
