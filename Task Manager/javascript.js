@@ -67,9 +67,7 @@ function create_board() {
         create_board_btn.remove();
         var create_board_again = document.createElement('li');
         create_board_again.setAttribute('class','create_board_item');
-        create_board_again.addEventListener('click', function() {
-            modal.style.display = 'block';
-        });
+        create_board_again.setAttribute('onclick', 'appear_modal()');
         var text_span = document.createElement('span');
         text_span.setAttribute('class', 'text');
         text_span.innerHTML = 'ایجاد تابلوی جدید';
